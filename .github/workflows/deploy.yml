@@ -23,4 +23,6 @@ jobs:
         run: npm install --global surge
       - name: Deploy to Surge
         run: surge --project ./dist --domain demonstration-2602.surge.sh
+        env:
+          SURGE_TOKEN: ${{ secrets.SURGE_TOKEN }}
 
