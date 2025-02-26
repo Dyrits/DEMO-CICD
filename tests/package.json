@@ -1,0 +1,11 @@
+{
+  "scripts": {
+    "cypress:install": "npx cypress install",
+    "cypress:open": "npm run cypress:install && npx cypress open",
+    "cypress:run": "npm run cypress:install && npx cypress run"
+  },
+  "dependencies": {
+    "cypress": "^14.0.3",
+    "typescript": "^5.7.3"
+  }
+}

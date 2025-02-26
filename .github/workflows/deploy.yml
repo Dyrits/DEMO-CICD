@@ -30,6 +30,15 @@ jobs:
       - name: Build the application
         run: npm run build
 
+      - name: Run the application
+        run: npm run dev &
+
+      - name: Cypress -- Run tests
+        uses: cypress-io/github-action@v6
+        with:
+          working-directory: ./tests
+          wait-on: "http://localhost:5173"
+
       - name: Deploy to Surge
         run: surge --project ./dist --domain demonstration-2602.surge.sh
         env:
